@@ -1,61 +1,164 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import SunsetVDetails from '../project-details/SunsetVDetails.vue'
+import WildWildWestDetails from '../project-details/WildWildWestDetails.vue'
+import LittleCreekDetails from '../project-details/LittleCreekDetails.vue';
+
 const projects = [
   {
     title: 'SunsetV - FiveM Projekt',
-    description: 'In zusammenarbeit mit zwei weiteren Personen ein FiveM Projekt aufgebaut und geleitet. Mit über 100 aktiven Spielern gleichzeitig online. Vorraning Support und Einstellung von Systemen.',
-    image: '/path/to/image1.jpg',
+    description:
+      'In zusammenarbeit mit zwei weiteren Personen ein FiveM Projekt aufgebaut und geleitet. Mit über 100 aktiven Spielern gleichzeitig online. Vorraning Support und Einstellung von Systemen.',
+    image: '/sunsetv.png',
     technologies: ['Teambetreung', 'Support', 'Systemeinstellung'],
+    detailComponent: SunsetVDetails
   },
   {
     title: 'Wild Wild West - RedM Projekt',
-    description: 'Nach Trennung von SunsetV ein RedM Projekt aufgebaut und geleitet. Begonnen mit der Entwicklung von Skripten in Lua und HTML für RedM. Nach 4 Monaten Laufzeit in Neuaufbau gegangen.',
-    image: '/path/to/image1.jpg',
+    description:
+      'Nach Trennung von SunsetV ein RedM Projekt aufgebaut und geleitet. Begonnen mit der Entwicklung von Skripten in Lua und HTML für RedM. Nach 4 Monaten Laufzeit in Neuaufbau gegangen.',
+    image: '/wildwildwest.png',
     technologies: ['LUA', 'HTML', 'CSS', 'JavaScript'],
+    detailComponent: WildWildWestDetails
   },
   {
     title: 'Little Creek - RedM Projekt',
-    description: 'Über 6 Monate aktiv mit Entwicklung von Skripten in Lua und HTML für RedM verbraucht und über 60% der Systeme selber entwickelt und viele weitere auf Open Source basierend umgeschrieben und eingebunden in bestehende Systeme. Über 120 aktiven Spieler.',
-    image: '/path/to/image1.jpg',
+    description:
+      'Über 6 Monate aktiv mit Entwicklung von Skripten in Lua und HTML für RedM verbraucht und über 60% der Systeme selber entwickelt und viele weitere auf Open Source basierend umgeschrieben und eingebunden in bestehende Systeme. Über 120 aktiven Spieler.',
+    image: '/littlecreek.png',
     technologies: ['LUA', 'HTML', 'CSS', 'JavaScript'],
+    detailComponent: LittleCreekDetails
   },
   {
     title: 'Little Creek - AltV Projekt (Rebar)',
-    description: 'Begonnen mit der Entwicklung eines kompletten Roleplay Frameworks in Typescript, Vue3, TailwindCSS auf dem Scaffold Framework Rebar. Aktuell noch in Entwicklung.',
-    image: '/path/to/image1.jpg',
-    technologies: ['Typescript', 'Vue3', 'TailwindCSS', 'Rebar'],
+    description:
+      'Begonnen mit der Entwicklung eines kompletten Roleplay Frameworks in Typescript, Vue3, TailwindCSS auf dem Scaffold Framework Rebar. Aktuell noch in Entwicklung.',
+    image: '/altv.png',
+    technologies: ['Typescript', 'Vue3', 'TailwindCSS', 'Rebar']
   },
   {
-    title: 'Abschlussprojekt Fachabitur - React Native App',
-    description: 'Für das Fachabitur eine React Native App entwickelt. Eine einfache App um schnell Nachhilfe Lehrer zu finden. Mit Registrierung und Login, Profilverwaltung,Profilbilder mit eigenem Upload, Umgebungssuche, Administrative Steuerung und Multifilter System von Lehrern.',
-    image: '/path/to/image1.jpg',
-    technologies: ['React Native', 'Expo', 'Firebase Authentication', 'JavaScript','FireBase Datenbank'],
-  },
+    title: 'TeachPool - React Native App',
+    description:
+      'Als Abschlussprojekt für das Fachabitur eine React Native App entwickelt. Eine einfache App um schnell Nachhilfe Lehrer zu finden. Mit Registrierung und Login, Profilverwaltung,Profilbilder mit eigenem Upload, Umgebungssuche, Administrative Steuerung und Multifilter System von Lehrern.',
+    image: '/teachpool.png',
+    technologies: [
+      'React Native',
+      'Expo',
+      'Firebase Authentication',
+      'JavaScript',
+      'FireBase Datenbank'
+    ]
+  }
   // Weitere Projekte hier hinzufügen
 ]
+
+const selectedProject = ref(null)
+
+const showProjectDetail = (project) => {
+  selectedProject.value = project
+}
+
+const goBack = () => {
+  selectedProject.value = null
+}
 </script>
 
 <template>
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold text-lime-500 mb-8">Projekte</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-      <div v-for="(project, index) in projects" 
-           :key="index"
-           class="bg-zinc-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform">
-        <div class="h-48 bg-lime-500/20">
-          <!-- Projektbild hier -->
-        </div>
-        <div class="p-9">
-          <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
-          <p class="text-gray-400 mb-4">{{ project.description }}</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span v-for="tech in project.technologies" 
+  <section id="projects" class="py-20">
+    <div class="container mx-auto px-4">
+      <div v-if="!selectedProject">
+        <!-- Projects Grid View -->
+        <h2 class="text-4xl font-bold text-lime-500 mb-12">Projekte</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            v-for="project in projects"
+            :key="project.title"
+            @click="showProjectDetail(project)"
+            class="bg-zinc-800 rounded-lg overflow-hidden cursor-pointer transform transition hover:scale-[1.02]"
+          >
+            <img :src="project.image" :alt="project.title" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white mb-2">{{ project.title }}</h3>
+              <p class="text-gray-400 mb-4">{{ project.description }}</p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  v-for="tech in project.technologies"
                   :key="tech"
-                  class="px-5 py-3 bg-lime-500/20 text-lime-500 rounded-full text-sm">
-              {{ tech }}
-            </span>
+                  class="bg-zinc-700 text-gray-300 px-3 py-1 rounded-full text-sm"
+                >
+                  {{ tech }}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Project Detail View -->
+      <div v-else class="animate-fadeIn">
+        <!-- <div class="flex items-center mb-8">
+          <button
+            @click="goBack"
+            class="flex items-center text-lime-500 hover:text-lime-400 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Zurück zur Übersicht
+          </button>
+        </div> -->
+        <div class="bg-black rounded-lg p-6">
+          <component :is="selectedProject.detailComponent" />
+          <button
+            @click="goBack"
+            class="flex items-center text-lime-500 hover:text-lime-400 text-center mx-auto pt-5 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Zurück zur Übersicht
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</template> 
+  </section>
+</template>
+
+<style scoped>
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>

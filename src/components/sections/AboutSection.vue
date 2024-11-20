@@ -23,6 +23,27 @@
           </a>
         </div>
       </div>
+      <div class="relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%]">
+          <div class="w-full h-full bg-gradient-radial"></div>
+        </div>
+        <img 
+          src="/Avatar_5.png" 
+          alt="LandminenTester Avatar" 
+          class="relative w-3/4 mx-auto"
+        >
+      </div>
     </div>
   </div>
-</template> 
+</template>
+
+<style scoped>
+.bg-gradient-radial {
+  background: radial-gradient(
+    circle at center,
+    rgba(132, 204, 22, 0.3) 0%,
+    rgba(132, 204, 22, 0.05) 50%,
+    transparent 100%
+  );
+}
+</style> 

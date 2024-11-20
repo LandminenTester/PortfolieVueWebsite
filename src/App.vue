@@ -81,10 +81,17 @@ onUnmounted(() => {
         >
           <SkillsSection />
         </section>
+        <section 
+          id="impressum" 
+          class="min-h-screen py-20"
+          v-intersection-observer="{ threshold: 0.2 }"
+        >
+        <h2 class="text-3xl font-light mb-12 text-center text-lime-400 tracking-wide animate-subtitle opacity-0">
+          Dies ist eine reine private Seite und es besteht keine Impressumspflicht.
+        </h2>
+        </section>
       </div>
-      <h2 class="text-3xl font-light mb-12 text-center text-lime-400 tracking-wide animate-subtitle opacity-0">
-        Dies ist eine rein persönliche Website, die ich für meinen Lebensweg erstellt habe, daher besteht keine Impressumspflicht.
-      </h2>
+
     </main>
   </div>
 </template>
