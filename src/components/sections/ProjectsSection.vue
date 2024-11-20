@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 import SunsetVDetails from '../project-details/SunsetVDetails.vue'
 import WildWildWestDetails from '../project-details/WildWildWestDetails.vue'
-import LittleCreekDetails from '../project-details/LittleCreekDetails.vue';
+import LittleCreekDetails from '../project-details/LittleCreekDetails.vue'
+import AltvDetails from '../project-details/AltvDetails.vue'
 
 const projects = [
   {
@@ -30,11 +31,12 @@ const projects = [
     detailComponent: LittleCreekDetails
   },
   {
-    title: 'Little Creek - AltV Projekt (Rebar)',
+    title: 'Little Creek - Alt:V Projekt',
     description:
       'Begonnen mit der Entwicklung eines kompletten Roleplay Frameworks in Typescript, Vue3, TailwindCSS auf dem Scaffold Framework Rebar. Aktuell noch in Entwicklung.',
     image: '/altv.png',
-    technologies: ['Typescript', 'Vue3', 'TailwindCSS', 'Rebar']
+    technologies: ['Typescript', 'Vue3', 'TailwindCSS', 'Rebar', 'MongoDB', 'vite'],
+    detailComponent: AltvDetails
   },
   {
     title: 'TeachPool - React Native App',

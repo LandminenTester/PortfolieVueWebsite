@@ -7,47 +7,47 @@
       </h3>
 
       <p class="text-center py-4 leading-relaxed text-lg">
-        Nach über sechs Monaten intensiver Arbeit entstand aus den Erfahrungen mit Wild Wild West
-        das ambitionierte Folgeprojekt Little Creek. Mit einem klaren Fokus auf technische
-        Innovation und Eigenentwicklung schufen wir einen der erfolgreichsten deutschen RedM-Server,
-        der neue Maßstäbe setzte.
+        Als Projektleiter und Entwicklungsleiter steuere ich die gesamte Entwicklung von "Little
+        Creek - U.S. County". Dabei bin ich maßgeblich für die Planung, Umsetzung und Koordination
+        der technischen Systeme verantwortlich und arbeite eng mit unserem Team zusammen, um unsere
+        Vision zu realisieren.
       </p>
       <p class="text-center py-4 leading-relaxed text-lg">
-        Meine Aufgaben blieben ähnlich wie im Vorgängerprojekt: Projektplanung, technischer Aufbau
-        und die Entwicklung eines einzigartigen Spielerlebnisses standen im Vordergrund. Der große
-        Unterschied lag jedoch im stärkeren Fokus auf eigene Systeme: Über 60% der Features wurden
-        von uns selbst entwickelt, während die restlichen Systeme mit Open-Source-Lösungen
-        abgestimmt und nahtlos integriert wurden.
+        Wir arbeiten an "Little Creek - U.S. County", einem innovativen Roleplay-Projekt für AltV,
+        das auf dem serverseitigen Framework Rebar basiert. Mit einem modernen Tech-Stack aus
+        TypeScript, Vue 3, Tailwind CSS und MongoDB entwickeln wir eine einzigartige Spielerfahrung,
+        die neue Maßstäbe in der Roleplay-Szene von GTA setzen soll.
       </p>
       <p class="text-center py-4 leading-relaxed text-lg">
-        Little Creek konnte mit über 120 aktiven Spielern gleichzeitig und mehr als 350
-        registrierten Spielern eine der größten deutschen RedM-Communities aufbauen. Damit gehörte
-        der Server zu den Top 4 RedM-Servern in Deutschland und überzeugte durch eine stabile
-        technische Basis, innovative Features und eine engagierte Community.
+        Unser Team besteht aus einem weiteren Entwickler, der sich aktuell in die Technologien
+        TypeScript und Vue 3 einarbeitet, um in die technische Entwicklung einzusteigen. Ergänzt
+        wird das Team durch einen talentierten 3D-Designer und Mapper, der individuelle Gebäude und
+        Landschaften für das Projekt gestaltet und so die Welt von Little Creek zum Leben erweckt.
+        Außerdem unterstützen uns drei engagierte Teammitglieder, die sich auf das
+        Community-Management, die Planung von Konzepten und die Zusammenführung von
+        Game-Design-Elementen konzentrieren.
       </p>
       <p class="text-center py-4 leading-relaxed text-lg">
-        Dieses Projekt war ein wichtiger Meilenstein in meiner Entwicklung als Entwickler und
-        Projektleiter, da es mir ermöglichte, komplexe Systeme umzusetzen, technische
-        Herausforderungen zu meistern und ein großes Team effektiv zu koordinieren. Little Creek
-        zeigte mir, wie wichtig die Kombination aus technischer Kreativität und starkem
-        Community-Management für den langfristigen Erfolg eines Projekts ist.
+        Gemeinsam verfolgen wir das Ziel, die bestehende Roleplay-Szene zu verändern. Dabei
+        kombinieren wir bewährte Konzepte aus RedM und GTA, denken sie weiter und schaffen so eine
+        völlig neue Spielerfahrung.
       </p>
       <p class="text-center py-4 leading-relaxed text-lg">
-        Im Herbst 2024 wurde das Projekt in die Season 2 überführt, um viele Designentscheidungen
-        neu zu überdenken und zu verbessern. Es wurden weitere Systeme entwickelt und implementiert,
-        und viele bestehende Systeme wurden verbessert und an die neuen Anforderungen angepasst.
-        Das Projekt ist aktuell im Wachstum erneut nach der zwei Monatigen Pause, die Zukunft ist
-        ungewiss.
+        "Little Creek - U.S. County" befindet sich aktuell in der Entwicklungsphase. Mit
+        Leidenschaft und Kreativität arbeiten wir daran, nicht nur ein Spiel, sondern eine lebendige
+        und dynamische Community zu erschaffen, die mit innovativem Gameplay und einzigartigem
+        Design überzeugt.
       </p>
 
       <h3 class="text-lime-500 text-center text-2xl font-bold">Hauptaufgaben</h3>
       <ul class="list-disc list-inside text-lg text-center py-4">
-        <li>Skripting von eigenen Systemen in LUA</li>
+        <li>Konzeptierung und Entwicklung von Systemen in Typescript</li>
         <li>Projektplanung</li>
         <li>Server-Infrastruktur verwaltet und aufgebaut</li>
-        <li>Allgemeine Technische Leitung</li>
-        <li>Team Management</li>
+        <li>Allgemeine Entwicklungsleitung</li>
+        <li>Projektleitung</li>
         <li>Game Design</li>
+        <li>Grafikdesign</li>
       </ul>
     </div>
   </div>
