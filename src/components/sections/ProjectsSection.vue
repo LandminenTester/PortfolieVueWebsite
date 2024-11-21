@@ -4,8 +4,18 @@ import SunsetVDetails from '../project-details/SunsetVDetails.vue'
 import WildWildWestDetails from '../project-details/WildWildWestDetails.vue'
 import LittleCreekDetails from '../project-details/LittleCreekDetails.vue'
 import AltvDetails from '../project-details/AltvDetails.vue'
+import TeachPoolDetails from '../project-details/TeachPoolDetails.vue'
 
-const projects = [
+// Add interface for project type
+interface Project {
+  title: string
+  description: string
+  image: string
+  technologies: string[]
+  detailComponent: any // or more specific component type if needed
+}
+
+const projects: Project[] = [
   {
     title: 'SunsetV - FiveM Projekt',
     description:
@@ -49,19 +59,31 @@ const projects = [
       'Firebase Authentication',
       'JavaScript',
       'FireBase Datenbank'
-    ]
+    ],
+    detailComponent: TeachPoolDetails
   }
   // Weitere Projekte hier hinzufügen
 ]
 
-const selectedProject = ref(null)
+const selectedProject = ref<Project | null>(null)
+const scrollPosition = ref(0)
 
-const showProjectDetail = (project) => {
+const showProjectDetail = (project: Project) => {
+  scrollPosition.value = window.scrollY
   selectedProject.value = project
+  setTimeout(() => {
+    document.getElementById('project-details')?.scrollIntoView({ behavior: 'smooth' })
+  }, 100)
 }
 
 const goBack = () => {
   selectedProject.value = null
+  setTimeout(() => {
+    window.scrollTo({
+      top: scrollPosition.value,
+      behavior: 'smooth'
+    })
+  }, 100)
 }
 </script>
 
@@ -70,7 +92,10 @@ const goBack = () => {
     <div class="container mx-auto px-4">
       <div v-if="!selectedProject">
         <!-- Projects Grid View -->
-        <h2 class="text-4xl font-bold text-lime-500 mb-12">Projekte</h2>
+        <h2 class="text-4xl font-bold text-lime-500 mb-1">Projekte</h2>
+        <h3 class="text-lg font-bold text-zinc-700 mb-12">
+          Klicke auf ein Projekt um mehr zu erfahren...
+        </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
             v-for="project in projects"
@@ -98,29 +123,7 @@ const goBack = () => {
 
       <!-- Project Detail View -->
       <div v-else class="animate-fadeIn">
-        <!-- <div class="flex items-center mb-8">
-          <button
-            @click="goBack"
-            class="flex items-center text-lime-500 hover:text-lime-400 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 mr-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            Zurück zur Übersicht
-          </button>
-        </div> -->
-        <div class="bg-black rounded-lg p-6">
+        <div id="project-details" class="bg-black rounded-lg p-6">
           <component :is="selectedProject.detailComponent" />
           <button
             @click="goBack"
