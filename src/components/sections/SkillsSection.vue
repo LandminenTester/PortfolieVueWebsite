@@ -10,10 +10,6 @@ const skills = {
       description: 'Vollständige App entwickelt, aber nicht mehr aktiv genutzt seit 2021'
     },
     { 
-      name: 'TypeScript (Aktiver Lernprozess)',
-      description: 'Fortgeschrittene Kenntnisse mit wachsender Erfahrung durch das aktuelle Alt:V Projekt'
-    },
-    { 
       name: 'Tailwind CSS (Aktiver Lernprozess)',
       description: 'Standard-Framework für das aktuelle Alt:V Projekt'
     },
@@ -49,6 +45,23 @@ const skills = {
       name: 'YouTrack',
       description: 'Nutzung im Alt:V Projekt, um im Team zu arbeiten und die Arbeit zu organisieren'
     },
+    { 
+      name: 'Photoshop',
+      description: 'Nutzung in verschiedenen Projekten für Grafiken und Webseiten'
+    },
+    { 
+      name: 'Trello',
+      description: 'Nutzung in verschiedenen Roleplay Projekten für die Arbeitsteilung und Organisation'
+    },
+  ],
+  programmingLanguages: [
+    {name: 'TypeScript', description: 'Fortgeschrittene Kenntnisse mit wachsender Erfahrung durch das aktuelle Alt:V Projekt'},
+    {name: 'LUA', description: 'Fortgeschrittene Kenntnisse durch verschiedene RedM Skripte'},
+    {name: 'JavaScript', description: 'Fortgeschrittene Kenntnisse durch verschiedene RedM Skripte und Webseiten'},
+    {name: 'Java', description: 'Fortgeschrittene Grundkenntnisse durch das Abitur, aber bereits mehrere Jahre nicht genutzt'},
+    {name: 'Python', description: 'Fortgeschrittene Grundkenntnisse durch das Abitur und Berufsschule'},
+    {name: 'C#', description: 'Grundkenntnisse durch Selbststudium für aktuellen Arbeitsgeber, um in ein Entwicklungsprojekt einzusteigen'},
+    {name: 'C++', description: 'Fortgeschrittene Grundkenntnisse durch Programmieren I & II im Studium (Erfolgreich abgeschlossene Module)'},
   ]
 }
 </script>
@@ -77,6 +90,21 @@ const skills = {
         <h3 class="text-2xl font-bold mb-6">Backend</h3>
         <div class="space-y-4">
           <div v-for="skill in skills.backend" :key="skill.name">
+            <div class="mb-1">
+              <span>{{ skill.name }}</span>
+            </div>
+            <div class="text-sm text-gray-400">
+              {{ skill.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programmiersprachen -->
+      <div class="bg-zinc-900 p-6 rounded-lg">
+        <h3 class="text-2xl font-bold mb-6">Programmiersprachen</h3>
+        <div class="space-y-4">
+          <div v-for="skill in skills.programmingLanguages" :key="skill.name">
             <div class="mb-1">
               <span>{{ skill.name }}</span>
             </div>
