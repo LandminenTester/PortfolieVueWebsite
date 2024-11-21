@@ -35,7 +35,13 @@ const experiences = [
     description: 'Verschiedene Tätigkeiten im Vertrieb, Support und Werkstatt eines kleinen IT Betriebs mit Kundenkontakt.',
     technologies: ['Vor Ort Service', 'Reperaturen von Rechnern','Bereinigung','Backup Service', 'Verkauf', 'Fernwartung', 'Lagerhaltung mit ERP System']
   },
-  // Weitere Erfahrungen hier hinzufügen
+  {
+    title: 'Sonstige Erfahrungen',
+    company: 'Einzelunternehmer',
+    period: '2022 - aktuell',
+    description: 'Einzelunternehmer im Bereich der Entwicklung von LUA Skripten für RedM, Grafikdesign und Content Creation auf Twitch.',
+    technologies: ['LUA', 'Photoshop', 'Social Media', 'HTML', 'CSS', 'JavaScript']
+  },
 ]
 </script>
 
