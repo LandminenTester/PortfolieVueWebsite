@@ -9,14 +9,25 @@ import SkillsSection from './components/sections/SkillsSection.vue'
 
 const showNav = ref(false)
 const gradientScale = ref(1)
+const isHeaderVisible = ref(false)
 
 const handleScroll = () => {
   showNav.value = window.scrollY > 100
   gradientScale.value = Math.max(0.5, 1 - (window.scrollY / window.innerHeight) * 0.8)
 }
 
+const handleHeaderIntersection = (entries: IntersectionObserverEntry[]) => {
+  isHeaderVisible.value = entries[0].isIntersecting
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  
+  const observer = new IntersectionObserver(handleHeaderIntersection, {
+    threshold: 0.2
+  })
+  const header = document.querySelector('header')
+  if (header) observer.observe(header)
 })
 
 onUnmounted(() => {
@@ -30,10 +41,10 @@ onUnmounted(() => {
     <header class="h-screen flex flex-col items-center justify-center relative hero-gradient"
       :style="{ '--gradient-scale': gradientScale }"
     >
-      <h1 class="text-7xl font-extrabold mb-4 text-white tracking-tight animate-title">
+      <h1 class="text-7xl font-extrabold mb-4 text-white tracking-tight" :class="{ 'animate-title': isHeaderVisible }">
         <span class="inline-block">Land</span><span class="inline-block">minen</span><span class="inline-block text-lime-400">Tester</span>
       </h1>
-      <h2 class="text-3xl font-light mb-12 text-lime-400 tracking-wide animate-subtitle opacity-0">
+      <h2 class="text-3xl font-light mb-12 text-lime-400 tracking-wide" :class="{ 'animate-subtitle': isHeaderVisible }">
         Zocker aus Leidenschaft der sein Weg in die Informatik gefunden hat
       </h2>
     </header>
@@ -183,7 +194,8 @@ html, body {
 }
 
 .animate-title span {
-  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
   animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
   &:nth-child(1) { animation-delay: 0.1s; }
@@ -192,6 +204,7 @@ html, body {
 }
 
 .animate-subtitle {
+  opacity: 0;
   animation: fadeIn 0.8s ease-out 0.8s forwards;
 }
 </style>
