@@ -3,17 +3,16 @@
     <img src="/altv.png" alt="Little Creek Detail" class="w-1/2 h-auto rounded-lg mx-auto" />
     <div class="prose prose-invert">
       <h3 class="text-lime-500 text-center text-2xl font-bold">
-        Little Creek – U.S. County ein Projekt mit großen Zielen
+        Vinewood Legacy ist ein Projekt mit großen Zielen
       </h3>
 
       <p class="text-center py-4 leading-relaxed text-lg">
-        Als Projektleiter und Entwicklungsleiter steuere ich die gesamte Entwicklung von "Little
-        Creek - U.S. County". Dabei bin ich maßgeblich für die Planung, Umsetzung und Koordination
+        Als Projektleiter und Entwicklungsleiter steuere ich die gesamte Entwicklung von "Vinewood Legacy". Dabei bin ich maßgeblich für die Planung, Umsetzung und Koordination
         der technischen Systeme verantwortlich und arbeite eng mit unserem Team zusammen, um unsere
         Vision zu realisieren.
       </p>
       <p class="text-center py-4 leading-relaxed text-lg">
-        Wir arbeiten an "Little Creek - U.S. County", einem innovativen Roleplay-Projekt für AltV,
+        Wir arbeiten an "Vinewood Legacy", einem innovativen Roleplay-Projekt für AltV,
         das auf dem serverseitigen Framework Rebar basiert. Mit einem modernen Tech-Stack aus
         TypeScript, Vue 3, Tailwind CSS und MongoDB entwickeln wir eine einzigartige Spielerfahrung,
         die neue Maßstäbe in der Roleplay-Szene von GTA setzen soll.
@@ -33,7 +32,7 @@
         völlig neue Spielerfahrung.
       </p>
       <p class="text-center py-4 leading-relaxed text-lg">
-        "Little Creek - U.S. County" befindet sich aktuell in der Entwicklungsphase. Mit
+        "Vinewood Legacy" befindet sich aktuell in der Entwicklungsphase. Mit
         Leidenschaft und Kreativität arbeiten wir daran, nicht nur ein Spiel, sondern eine lebendige
         und dynamische Community zu erschaffen, die mit innovativem Gameplay und einzigartigem
         Design überzeugt.

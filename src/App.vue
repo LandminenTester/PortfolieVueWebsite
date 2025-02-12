@@ -42,10 +42,10 @@ onUnmounted(() => {
       :style="{ '--gradient-scale': gradientScale }"
     >
       <h1 class="text-7xl font-extrabold mb-4 text-white tracking-tight" :class="{ 'animate-title': isHeaderVisible }">
-        <span class="inline-block">Land</span><span class="inline-block">minen</span><span class="inline-block text-lime-400">Tester</span>
+        <span class="inline-block">Johannes</span><span class="inline-block">Mark</span><span class="inline-block text-lime-400">wordt</span>
       </h1>
       <h2 class="text-3xl font-light mb-12 text-lime-400 tracking-wide" :class="{ 'animate-subtitle': isHeaderVisible }">
-        Zocker aus Leidenschaft der sein Weg in die Informatik gefunden hat
+        Gamer aus Leidenschaft der sein Weg in die Informatik gefunden hat. Diese Seite wurde in Vue3 von mir selbst erstellt, um meine Projekte und Erfahrungen zu teilen.
       </h2>
     </header>
 

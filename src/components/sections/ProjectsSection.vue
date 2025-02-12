@@ -5,6 +5,7 @@ import WildWildWestDetails from '../project-details/WildWildWestDetails.vue'
 import LittleCreekDetails from '../project-details/LittleCreekDetails.vue'
 import AltvDetails from '../project-details/AltvDetails.vue'
 import TeachPoolDetails from '../project-details/TeachPoolDetails.vue'
+import BreweryDetails from '../project-details/BreweryDetails.vue'
 
 // Add interface for project type
 interface Project {
@@ -16,6 +17,14 @@ interface Project {
 }
 
 const projects: Project[] = [
+{
+    title: 'Brewery - Skriptverkauf für RedM',
+    description:
+      'Ein Skript online Markt für RedM Skripte die ich selbst entwickelt habew.',
+    image: '/brewery.png',
+    technologies: ['LUA', 'HTML', 'CSS', 'JavaScript'],
+    detailComponent: BreweryDetails
+  },
   {
     title: 'SunsetV - FiveM Projekt',
     description:
@@ -41,7 +50,7 @@ const projects: Project[] = [
     detailComponent: LittleCreekDetails
   },
   {
-    title: 'Little Creek - Alt:V Projekt',
+    title: 'Vinewood Legacy - Alt:V Projekt',
     description:
       'Begonnen mit der Entwicklung eines kompletten Roleplay Frameworks in Typescript, Vue3, TailwindCSS auf dem Scaffold Framework Rebar. Aktuell noch in Entwicklung.',
     image: '/altv.png',
