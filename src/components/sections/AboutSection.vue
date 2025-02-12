@@ -21,17 +21,17 @@
              class="px-4 py-2 bg-lime-500 text-black rounded hover:bg-lime-600 transition-colors">
             Twitch
           </a>
+          <a href="https://www.linkedin.com/in/jmarkwordt/" 
+             target="_blank"
+             class="px-4 py-2 bg-lime-500 text-black rounded hover:bg-lime-600 transition-colors">
+            LinkedIn
+          </a>
         </div>
       </div>
       <div class="relative">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%]">
           <div class="w-full h-full bg-gradient-radial"></div>
         </div>
-        <img 
-          src="/Avatar_5.png" 
-          alt="LandminenTester Avatar" 
-          class="relative w-3/4 mx-auto"
-        >
       </div>
     </div>
   </div>

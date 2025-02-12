@@ -62,6 +62,28 @@ const skills = {
     {name: 'Python', description: 'Fortgeschrittene Grundkenntnisse durch das Abitur und Berufsschule'},
     {name: 'C#', description: 'Grundkenntnisse durch Selbststudium für aktuellen Arbeitsgeber, um in ein Entwicklungsprojekt einzusteigen'},
     {name: 'C++', description: 'Fortgeschrittene Grundkenntnisse durch Programmieren I & II im Studium (Erfolgreich abgeschlossene Module)'},
+  ],
+  integration: [
+    { 
+      name: 'Azure',
+      description: 'DevOps Umgebung, Pipelines und Virtuelle Maschinen'
+    },
+    { 
+      name: 'Docker',
+      description: 'Container Erstellung und Verwaltung'
+    },
+    { 
+      name: 'Netzwerktechnik',
+      description: 'Grundkenntnisse durch das Abitur und Berufsschule, sowie Schnittpunkte im Beruflichen Alltag'
+    },
+    { 
+      name: 'Windows Server',
+      description: 'Verwaltung der Azure AD, generelle Verwaltung von Windows Servern'
+    },
+    { 
+      name: 'Linux',
+      description: 'Debian und Ubuntu in Berufsschulischen Kontext und dem privaten Umfeld'
+    },
   ]
 }
 </script>
@@ -120,6 +142,21 @@ const skills = {
         <h3 class="text-2xl font-bold mb-6">Tools & Software</h3>
         <div class="space-y-4">
           <div v-for="skill in skills.tools" :key="skill.name">
+            <div class="mb-1">
+              <span>{{ skill.name }}</span>
+            </div>
+            <div class="text-sm text-gray-400">
+              {{ skill.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integration -->
+      <div class="bg-zinc-900 p-6 rounded-lg">
+        <h3 class="text-2xl font-bold mb-6">Systemintegration</h3>
+        <div class="space-y-4">
+          <div v-for="skill in skills.integration" :key="skill.name">
             <div class="mb-1">
               <span>{{ skill.name }}</span>
             </div>

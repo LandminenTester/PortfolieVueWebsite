@@ -42,10 +42,10 @@ onUnmounted(() => {
       :style="{ '--gradient-scale': gradientScale }"
     >
       <h1 class="text-7xl font-extrabold mb-4 text-white tracking-tight" :class="{ 'animate-title': isHeaderVisible }">
-        <span class="inline-block">Johannes</span><span class="inline-block">Mark</span><span class="inline-block text-lime-400">wordt</span>
+        <span class="inline-block">Jo</span><span class="inline-block">hannes </span> <span class="inline-block text-lime-400">Markwordt</span>
       </h1>
       <h2 class="text-3xl font-light mb-12 text-lime-400 tracking-wide" :class="{ 'animate-subtitle': isHeaderVisible }">
-        Gamer aus Leidenschaft der sein Weg in die Informatik gefunden hat. Diese Seite wurde in Vue3 von mir selbst erstellt, um meine Projekte und Erfahrungen zu teilen.
+        Gamer aus Leidenschaft der sein Weg in die Informatik gefunden hat. <br>Um meine Projekte und Erfahrungen zu teilen, habe ich diese Seite erstellt.
       </h2>
     </header>
 
@@ -194,17 +194,27 @@ html, body {
 }
 
 .animate-title span {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-
-  &:nth-child(1) { animation-delay: 0.1s; }
-  &:nth-child(2) { animation-delay: 0.3s; }
-  &:nth-child(3) { animation-delay: 0.5s; }
+  opacity: 1;
+  transform: none;
+  animation: none;
 }
 
 .animate-subtitle {
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out 0.8s forwards;
+  opacity: 1;
+  animation: none;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: center;
 }
 </style>
